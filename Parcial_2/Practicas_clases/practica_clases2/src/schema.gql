@@ -1,0 +1,72 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Ubicacione {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type ConsultaClima {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Clima {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Query {
+  ubicaciones: [Ubicacione!]!
+  ubicacione(id: Int!): Ubicacione!
+  consultaClimas: [ConsultaClima!]!
+  consultaClima(id: Int!): ConsultaClima!
+  climas: [Clima!]!
+  clima(id: Int!): Clima!
+}
+
+type Mutation {
+  createUbicacione(createUbicacioneInput: CreateUbicacioneInput!): Ubicacione!
+  updateUbicacione(updateUbicacioneInput: UpdateUbicacioneInput!): Ubicacione!
+  removeUbicacione(id: Int!): Ubicacione!
+  createConsultaClima(createConsultaClimaInput: CreateConsultaClimaInput!): ConsultaClima!
+  updateConsultaClima(updateConsultaClimaInput: UpdateConsultaClimaInput!): ConsultaClima!
+  removeConsultaClima(id: Int!): ConsultaClima!
+  createClima(createClimaInput: CreateClimaInput!): Clima!
+  updateClima(updateClimaInput: UpdateClimaInput!): Clima!
+  removeClima(id: Int!): Clima!
+}
+
+input CreateUbicacioneInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateUbicacioneInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateConsultaClimaInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateConsultaClimaInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateClimaInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdateClimaInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
