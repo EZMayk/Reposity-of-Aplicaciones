@@ -1,0 +1,85 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateFormularioAdopcionInput {
+  haTenidoMascotasAntes: Boolean!
+  mascotaId: String!
+  tipoVivienda: String!
+  usuarioId: String!
+}
+
+input CreateMascotaInput {
+  disponible: Boolean = true
+  edad: Int!
+  especie: String!
+  nombre: String!
+  raza: String!
+}
+
+input CreateUsuarioInput {
+  direccion: String!
+  email: String!
+  nombreCompleto: String!
+  telefono: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+"""Estados posibles de una solicitud de adopción"""
+enum EstadoSolicitud {
+  APROBADO
+  PENDIENTE
+  RECHAZADO
+}
+
+type FormularioAdopcion {
+  estado: EstadoSolicitud!
+  fechaSolicitud: DateTime!
+  haTenidoMascotasAntes: Boolean!
+  id: ID!
+  mascota: Mascota
+  mascotaId: String!
+  tipoVivienda: String!
+  usuario: Usuario
+  usuarioId: String!
+}
+
+type Mascota {
+  disponible: Boolean!
+  edad: Int!
+  especie: String!
+  id: ID!
+  nombre: String!
+  raza: String!
+}
+
+type Mutation {
+  aprobarFormulario(id: String!): FormularioAdopcion!
+  crearFormulario(input: CreateFormularioAdopcionInput!): FormularioAdopcion!
+  crearMascota(input: CreateMascotaInput!): Mascota!
+  crearUsuario(input: CreateUsuarioInput!): Usuario!
+  rechazarFormulario(id: String!): FormularioAdopcion!
+}
+
+type Query {
+  formulario(id: String!): FormularioAdopcion!
+  formularios: [FormularioAdopcion!]!
+  formulariosPorUsuario(usuarioId: String!): [FormularioAdopcion!]!
+  mascota(id: String!): Mascota!
+  mascotas: [Mascota!]!
+  mascotasDisponibles: [Mascota!]!
+  usuario(id: String!): Usuario!
+  usuarios: [Usuario!]!
+}
+
+type Usuario {
+  direccion: String!
+  email: String!
+  id: ID!
+  nombreCompleto: String!
+  telefono: String!
+}

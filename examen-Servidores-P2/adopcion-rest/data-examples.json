@@ -1,0 +1,87 @@
+{
+  "usuarios": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440001",
+      "nombreCompleto": "Juan Pérez",
+      "email": "juan.perez@email.com",
+      "telefono": "+56912345678",
+      "direccion": "Av. Las Condes 123, Santiago"
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440002",
+      "nombreCompleto": "María González",
+      "email": "maria.gonzalez@email.com",
+      "telefono": "+56987654321",
+      "direccion": "Calle Providencia 456, Santiago"
+    }
+  ],
+  "mascotas": [
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440001",
+      "nombre": "Max",
+      "especie": "Perro",
+      "raza": "Golden Retriever",
+      "edad": 3,
+      "disponible": true
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440002",
+      "nombre": "Luna",
+      "especie": "Gato",
+      "raza": "Siames",
+      "edad": 2,
+      "disponible": true
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440003",
+      "nombre": "Rocky",
+      "especie": "Perro",
+      "raza": "Pastor Alemán",
+      "edad": 5,
+      "disponible": false
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440004",
+      "nombre": "Mimi",
+      "especie": "Gato",
+      "raza": "Persa",
+      "edad": 1,
+      "disponible": true
+    }
+  ],
+  "formulariosAdopcion": [
+    {
+      "id": "770e8400-e29b-41d4-a716-446655440001",
+      "usuarioId": "550e8400-e29b-41d4-a716-446655440001",
+      "mascotaId": "660e8400-e29b-41d4-a716-446655440003",
+      "haTenidoMascotasAntes": true,
+      "tipoVivienda": "Casa con jardín",
+      "fechaSolicitud": "2024-01-15T00:00:00.000Z",
+      "estado": "APROBADO"
+    }
+  ],
+  "ejemplosRequestsNuevos": {
+    "nuevoUsuario": {
+      "nombreCompleto": "Ana Silva",
+      "email": "ana.silva@email.com",
+      "telefono": "+56956789012",
+      "direccion": "Paseo Bulnes 789, Santiago"
+    },
+    "nuevaMascota": {
+      "nombre": "Buddy",
+      "especie": "Perro",
+      "raza": "Labrador",
+      "edad": 2,
+      "disponible": true
+    },
+    "nuevoFormulario": {
+      "usuarioId": "550e8400-e29b-41d4-a716-446655440002",
+      "mascotaId": "660e8400-e29b-41d4-a716-446655440001",
+      "haTenidoMascotasAntes": false,
+      "tipoVivienda": "Departamento"
+    },
+    "cambiarEstado": {
+      "estado": "APROBADO"
+    }
+  }
+}
